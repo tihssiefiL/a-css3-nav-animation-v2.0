@@ -1,0 +1,88 @@
+body
+{
+    background-color: #c1bebe;
+}
+#nav
+{
+    height: 50px;
+}
+#nav .nav-menu
+{
+    display: block;
+
+    width: 950px;
+    height: 50px;
+    margin: 0 auto;
+}
+/*直接子元素，不选择孙元素*/
+#nav .nav-menu > li
+{
+    float: left;
+
+    width: auto;
+    height: 50px;
+
+    list-style: none;
+
+    border: 1px solid black;
+}
+#nav .nav-menu li a
+{
+    font-size: 24px;
+    line-height: 50px;
+
+    display: block;
+
+    width: 132px;
+    height: 50px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+}
+#nav .nav-menu li .three-d
+{
+    position: relative;
+
+    perspective: 600px;
+}
+#nav .nav-menu li .three-d-box
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+}
+#nav .nav-menu li .three-d-box .font,
+#nav .nav-menu li .three-d-box .back
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #d96a6a;
+}
+
+#nav .nav-menu li .three-d-box .font
+{
+    transform: translateZ(25px);
+    background-color: #8344D2;
+}
+#nav .nav-menu li .three-d-box .back
+{
+    transform: rotateX(-90deg) translateZ(25px) ;
+    background-color: #37E1EA;
+}
+#nav .nav-menu li .three-d:hover .three-d-box
+{
+    transition: all .3s linear;
+    transform: rotateX(90deg);
+}
